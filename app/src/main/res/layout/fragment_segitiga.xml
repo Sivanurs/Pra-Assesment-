@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragment.SegitigaFragment" android:id="@+id/frameLayout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/Segitiga"
+                android:text="@string/segitiga_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="32dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"/>
+        <EditText
+                android:id="@+id/alas_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:hint="@string/hint_alas"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.236"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/Segitiga"/>
+        <EditText
+                android:id="@+id/tinggi_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:hint="@string/hint_tinggi"
+                app:layout_constraintStart_toStartOf="@+id/alas_segitiga"
+                app:layout_constraintEnd_toEndOf="@+id/alas_segitiga"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/alas_segitiga"/>
+        <Button
+                android:text="@string/hitung_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_hitung_segitiga" app:layout_constraintStart_toStartOf="@+id/tinggi_segitiga"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/tinggi_segitiga"/>
+        <TextView
+                android:text="@string/luas_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/luas_segitiga" app:layout_constraintStart_toStartOf="@+id/btn_hitung_segitiga"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hitung_segitiga" android:layout_marginTop="80dp"/>
+        <TextView
+                android:text="@string/keliling_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/keliling_segitiga" app:layout_constraintStart_toStartOf="@+id/luas_segitiga"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/luas_segitiga"/>
+        <Button
+                android:text="@string/share_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_share_segitiga" app:layout_constraintStart_toStartOf="@+id/keliling_segitiga"
+                android:layout_marginTop="36dp"
+                app:layout_constraintTop_toBottomOf="@+id/keliling_segitiga"/>
+        <TextView
+                android:text="@string/hasil_segitiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hasil_segitiga" app:layout_constraintStart_toStartOf="@+id/btn_hitung_segitiga"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hitung_segitiga"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_hasil_segitiga" tools:text="0"
+                app:layout_constraintStart_toEndOf="@+id/hasil_segitiga" android:layout_marginStart="52dp"
+                android:layout_marginBottom="344dp" app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="427dp"
+                tools:layout_editor_absoluteX="175dp" android:id="@+id/tv_luas_segitiga" tools:text="0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="478dp"
+                tools:layout_editor_absoluteX="164dp" android:id="@+id/tv_keliling_segitiga" tools:text="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+</layout>
